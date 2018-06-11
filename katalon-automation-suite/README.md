@@ -1,6 +1,6 @@
 # Sope Power Tools: Katalon Automation
 
-## Usage 
+## General Usage 
 
 1. Download & extract the sope-powertools from github.
 2. Install & open the [Katalon Recorder Chome Extension](https://chrome.google.com/webstore/detail/katalon-recorder-selenium/ljdobmomdgdljniojadhoplhkpialdid).
@@ -8,7 +8,9 @@
 4. Select the automation (or 'test case') you want to run.
 5. Follow instructions for that test case: 
 
-### Set PowerApps Props
+## Set PowerApps Props
+
+Note: There's a video [here](https://www.youtube.com/watch?v=LwADIPiLYK4) giving a quick tour of how this works. 
 
 1. Open the PowerApps form in the same browser window Katalon is open for.
 2. Set up the `csv` files you need (samples may be found in the folder 'set-powerapps-props'). Try not to unnecessarily set properties.
