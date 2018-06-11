@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+	<title>Sope Power Tools Automation Suite</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Set PowerApps Props</td></tr>
+</thead>
+<tbody>
+<tr><td>store</td><td>delayTime<datalist><option>150</option><option>50</option><option>delayTime</option></datalist></td><td>250</td>
+</tr>
+<tr><td>loadVars</td><td>PROPSFILE.csv<datalist><option>props.csv</option></datalist></td><td></td>
+</tr>
+<tr><td>if</td><td>'${Property}'==''<datalist><option>${Property} == ""</option><option>${Property}=""</option><option>"${Property}"=""</option><option>'${Property}'=''</option><option>'${Property}'==''</option></datalist></td><td></td>
+</tr>
+<tr><td>gotoLabel</td><td>END<datalist><option>END</option></datalist></td><td></td>
+</tr>
+<tr><td>endIf</td><td><datalist><option></option></datalist></td><td></td>
+</tr>
+<tr><td>setTextAndWait</td><td>id=property-dropdown<datalist><option>id=property-dropdown</option><option>//input[@id='property-dropdown']</option><option>//div[@id='root']/div[4]/div/formula-bar/div/div/combo-box/div/div/input</option><option>//div/div/combo-box/div/div/input</option><option>css=#property-dropdown</option></datalist></td><td>${Property}</td>
+</tr>
+<tr><td>pause</td><td>delayTime<datalist><option>delayTime</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>//*[@id="root"]/div[4]/div/formula-bar/div/div/formula-bar-rule-textbox/div/div[1]/div[1]/div/div[1]/div/div[1]/div[2]/div[1]/div[4]/div<datalist><option>//div[@id='root']/div[4]/div/formula-bar/div/div/formula-bar-rule-textbox/div/div/div/div/div/div/div/textarea</option><option>formula-bar</option><option>//*[@id="root"]/div[4]/div/formula-bar/div/div/formula-bar-rule-textbox/div/div[1]/div[1]/div/div[1]/div/div[1]/div[2]/div[1]/div[4]/div</option></datalist></td><td></td>
+</tr>
+<tr><td>pause</td><td>delayTime<datalist><option>50</option><option>150</option><option>delayTime</option></datalist></td><td></td>
+</tr>
+<tr><td>addScriptAndWait</td><td>monaco.editor.getModels()[0].applyEdits([{text:"${Value}", range:new monaco.Range(1, 1, 10000, 1) }])<datalist><option>//div[@id='root']/div[4]/div/formula-bar/div/div/formula-bar-rule-textbox/div/div/div/div/div/div/div/textarea</option><option>monaco.editor.getModels()[0].applyEdits([{text:"${From}.${Property}", range:new monaco.Range(1, 1, 10000, 1) }])</option><option>monaco.editor.getModels()[0].applyEdits([{text:"${Value}", range:new monaco.Range(1, 1, 10000, 1) }])</option></datalist></td><td></td>
+</tr>
+<tr><td>pause</td><td>delayTime<datalist><option>50</option><option>150</option><option>delayTime</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>//div[@id='root']/div[4]/div/formula-bar/div/div/div<datalist><option>//div[@id='root']/div[4]/div/formula-bar/div/div/div</option><option>//formula-bar/div/div/div</option><option>css=div.equal</option></datalist></td><td></td>
+</tr>
+<tr><td>endLoadVars</td><td><datalist><option></option></datalist></td><td></td>
+</tr>
+<tr><td>pause</td><td>delayTime<datalist><option>delayTime</option><option>50</option><option>150</option></datalist></td><td></td>
+</tr>
+<tr><td>label</td><td>END<datalist><option>END</option></datalist></td><td></td>
+</tr>
+</tbody></table>
+</body>
+</html>
